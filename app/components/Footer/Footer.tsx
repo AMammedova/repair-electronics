@@ -140,9 +140,6 @@ const Footer = () => {
             <li>
               <a href="#">Blogs</a>
             </li>
-            <li>
-              <a href="#">Careers</a>
-            </li>
           </ul>
           <p className={styles.footerText}>
             Everyone deserves a second chance, so do your phone!
