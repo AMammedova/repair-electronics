@@ -1,0 +1,62 @@
+.deviceSlider {
+  width: 80%;
+  padding: 2rem;
+  border-top: 0.8px solid #d0d5dd;
+  border-bottom: 0.8px solid #d0d5dd;
+  margin: 2rem auto;
+
+  .deviceCard {
+    width: 195px;
+    height: 155px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px 28px;
+    text-align: center;
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+    font-size: 14px;
+
+    &:hover {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    &.selected {
+      border-color: #007bff;
+      background-color: #eef4ff;
+    }
+
+    .iconWrapper {
+      background-color: #E0EAFF;
+      border-radius: 50%;
+      padding: 5px;
+      margin-bottom: 1rem;
+      width: 56px;
+      height: 56px;
+      display: flex;
+      justify-content: center;
+      align-items: center
+    }
+
+    img {
+      width: 30px;
+      height: 30px;
+    }
+
+    p {
+      font-size: 14px;
+      font-weight: bold;
+      color: #333;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .deviceSlider {
+.deviceCard{
+  width: 200px;
+  height: 150px;
+
+
+}
+  }
+}

@@ -1,0 +1,118 @@
+.testimonialSection {
+  text-align: center;
+  padding: 3rem 0;
+  border-bottom: 0.8px solid #d0d5dd;
+
+  .title {
+    text-align: start;
+    color: #101828;
+    font-family: Poppins;
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 44px;
+    letter-spacing: -0.72px;
+    margin-bottom: 1rem;
+  }
+
+  .subtitle {
+    text-align: start;
+    color: #667085;
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+  }
+
+  .testimonialWrapper {
+    padding: 3.8rem 1rem 1rem 0rem;
+  }
+
+  .testimonialCard {
+    background: #ffffff;
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: start;
+    transition: box-shadow 0.3s ease;
+
+    &:hover {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .imageWrapper {
+      margin-bottom: 1rem;
+    }
+
+    .image {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+    }
+
+    .name {
+      color: #101828;
+      font-family: Poppins;
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .position {
+      color: #667085;
+      font-family: Poppins;
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+
+    .rating {
+      margin-bottom: 1rem;
+      svg {
+        color: #ffd700; /* Altın rengi */
+        margin-right: 2px;
+      }
+    }
+
+    .quote {
+      color: #667085;
+      font-family: Poppins;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+    }
+  }
+
+  .arrowButton {
+    display: flex;
+    width: 56px;
+    height: 56px;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    border-radius: 50%;
+    border: 1px solid #eaecf0;
+    background: rgba(255, 255, 255, 0.9);
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    &:focus {
+      outline: none;
+    }
+    img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .testimonialSection {
+    .title {
+      font-size: 32px;
+    }
+    .subtitle {
+      font-size: 16px;
+    }
+  }
+  
+}

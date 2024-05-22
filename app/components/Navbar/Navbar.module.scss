@@ -1,0 +1,191 @@
+@import "../../../styles/globals.scss";
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $main-color;
+  padding: 1rem 2rem;
+  font-family: "Poppins", sans-serif;
+
+  .burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 4px;
+    transition: all 0.3s ease;
+
+    .burgerLine {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      transition: all 0.3s ease;
+    }
+
+    &.open {
+      .burgerLine:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+
+      .burgerLine:nth-child(2) {
+        opacity: 0;
+      }
+
+      .burgerLine:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+      }
+    }
+  }
+
+  .navLinks {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    transition: all 0.3s ease;
+
+    li {
+      margin: 0 1rem;
+      position: relative;
+
+      a {
+        text-decoration: none;
+        color: white;
+        font-size: 0.9rem;
+
+        &:hover {
+          color: #444ce7;
+        }
+      }
+
+      &.dropdown {
+        .dropdownToggle {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          &::after {
+            content: ">";
+            margin-left: 5px;
+            transition: transform 0.3s ease;
+          }
+
+          &:hover::after {
+            transform: rotate(90deg);
+          }
+        }
+
+        .dropdownMenu {
+          display: none;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          background-color: white;
+          border-radius: 5px;
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          z-index: 111;
+
+          li {
+            margin: 0;
+            a {
+              display: block;
+              width: 100px;
+              padding: 0.5rem 1rem;
+              color: black;
+              text-decoration: none;
+              border-radius: 5px;
+
+              &:hover {
+                background-color: #f1f1f1;
+              }
+            }
+          }
+        }
+
+        &:hover .dropdownMenu {
+          display: block;
+        }
+
+        &:hover .dropdownToggle::after {
+          transform: rotate(90deg);
+        }
+      }
+    }
+  }
+
+  .navActions {
+    display: flex;
+    align-items: center;
+
+    .repairButton {
+      font-family: "Poppins", sans-serif;
+      background-color: #444ce7;
+      color: white;
+      border: none;
+      padding: 0.6rem 1rem;
+      cursor: pointer;
+      border-radius: 8px;
+      margin-right: 1rem;
+      font-size: 0.9rem;
+
+      &:hover {
+        background-color: #3c45e8;
+      }
+    }
+
+    .phoneNumber {
+      display: inline-flex;
+      align-items: center;
+      font-family: "Poppins", sans-serif;
+      background-color: #eef4ff;
+      color: #3538cd;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      text-decoration: none;
+
+      img {
+        margin-right: 0.5rem;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+    justify-content: end;
+    padding: 2rem 2rem;
+    position: fixed;
+    width: 100%;
+    z-index: 99999999999;
+    margin-bottom: 5rem;
+    .burger {
+      display: flex;
+    }
+
+    .navLinks {
+      flex-direction: column;
+      display: none;
+      width: 100%;
+      text-align: center;
+
+      &.showMenu {
+        display: flex;
+      }
+
+      li {
+        margin: 1rem 0;
+      }
+    }
+
+    .navActions {
+      width: 100%;
+      justify-content: center;
+      margin-top: 1rem;
+      display: none;
+    }
+  }
+}

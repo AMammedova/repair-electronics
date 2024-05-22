@@ -1,0 +1,82 @@
+.landingPage {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 6rem;
+  .content {
+    max-width: 50%;
+
+    h1 {
+      font-size: 3.4rem;
+      color: #333;
+    }
+
+    .repairButton {
+      display: inline-flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 1rem;
+      background-color: #444ce7;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      span {
+        margin-left: 0.3rem;
+      }
+
+      &:hover {
+        background-color: #3c45e8;
+      }
+    }
+  }
+
+  .imageContainer {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    position: relative;
+
+    .mainImage {
+      width: 80%;
+      height: auto;
+    }
+  }
+
+  @media (max-width: 768px) {
+    margin-top: 5rem;
+    flex-direction: column;
+    text-align: start;
+    padding: 1rem 1rem;
+    .content {
+      max-width: 90%;
+      margin-bottom: 2rem;
+      h1 {
+        font-size: 36px;
+        line-height: 44px;
+      }
+      .repairButton {
+    
+        display: flex;
+        width: 100%;
+        margin: 1rem auto;
+        padding: 12px 20px;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        flex: 1 0 0;
+      }
+    }
+
+    .imageContainer {
+      justify-content: center;
+
+      .mainImage {
+        width: 80%;
+      }
+    }
+  }
+}
